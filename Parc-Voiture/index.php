@@ -9,7 +9,7 @@
 		'berlin',
 		'Audi', 
 		'rouge',
-		'2 fdp'
+		'2 tonnes'
 	);
 ?>
 <!DOCTYPE html>
