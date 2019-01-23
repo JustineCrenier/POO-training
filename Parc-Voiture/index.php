@@ -2,13 +2,15 @@
 	
 	require 'assets/php/Voiture.php';
 
-	$voiture1 = new Voiture('CZcdef',
-							'2015',
-							'150000',
-							'berlin',
-							'Audi', 
-							'rouge',
-							'2 fdp');
+	$voiture1 = new Voiture(
+		'CZcdef',
+		'2015',
+		'150000',
+		'berlin',
+		'Audi', 
+		'rouge',
+		'2 fdp'
+	);
 ?>
 <!DOCTYPE html>
 <html lang="en">
