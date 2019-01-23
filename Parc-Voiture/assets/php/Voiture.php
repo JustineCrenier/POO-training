@@ -1,4 +1,6 @@
 <?php
+	
+	ini_set('display_errors', 1);
 
 	class Voiture {
 
@@ -9,8 +11,18 @@
 		private $_marque;
 		private $_couleur;
 		private $_poids;
+		private $_image;
 
-		public function __construct($plaque, $date, $kilometre, $modele, $marque, $couleur, $poids){
+		public function __construct(
+			$plaque,
+			$date,
+			$kilometre,
+			$modele,
+			$marque,
+			$couleur,
+			$poids,
+			$image
+		){
 
 			$this->_plaque = $plaque;
 			$this->_date = $date;
@@ -19,6 +31,7 @@
 			$this->_marque = $marque;
 			$this->_couleur = $couleur;
 			$this->_poids = $poids;
+			$this->_image = $image;
 
 		}
 
@@ -42,6 +55,10 @@
 			return $this->_date;
 		}
 
+		public function getImage(){
+			return $this->_image;
+		}
+
 		public function isAvailable(){
 			return strtolower($this->_marque) == 'audi' ? 'reservée' : 'libre';
 		}
@@ -52,11 +69,11 @@
 
 		public function isUse(){
 			if($this->_kilometre <= 100000){
-				$use = 'low';
+				$use = 'Faible';
 			}elseif($this->_kilometre > 100000 && $this->_kilometre < 200000){
-				$use = 'middle';
+				$use = 'Moyenne';
 			}else{
-				$use = 'high';
+				$use = 'Haute';
 			}
 
 			return $use;
@@ -85,11 +102,36 @@
 
 		public function display(){
 			echo '<table>
-					<tr>
-						<td>
-							Yolo
-						</td>
-					</tr>
+					<thead>
+						<tr>
+							<th>'.$this->getMarque().' | '.$this->getModele().'</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<img src="assets/img/'.$this->getImage().'" alt="image de la voiture">
+							</td>
+						</tr>
+						<tr>
+							<td>Provenance: '.$this->getCountry().'</td>
+						</tr>
+						<tr>
+							<td>Kilomètrage: '.$this->getKilometre().'</td>
+						</tr>
+						<tr>
+							<td>Usure: '.$this->isUse().'</td>
+						</tr>
+						<tr>
+							<td>Catégorie: '.$this->category().'</td>
+						</tr>
+						<tr>
+							<td>Couleur: '.$this->getColor().'</td>
+						</tr>
+						<tr>
+							<td>Disponible: '.$this->isAvailable().'</td>
+						</tr>
+					</tbody>
 				</table>';
 		}
 	}
