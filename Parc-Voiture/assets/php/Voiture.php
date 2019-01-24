@@ -110,7 +110,7 @@
 					<tbody>
 						<tr>
 							<td>
-								<img src="assets/img/'.$this->getImage().'" alt="image de la voiture">
+								<img src="assets/img/'.$this->getImage().'.jpg" alt="image de la voiture">
 							</td>
 						</tr>
 						<tr>

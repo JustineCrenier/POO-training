@@ -10,7 +10,7 @@
 		'Audi', 
 		'rouge',
 		'2 tonnes',
-		'audi.jpg'
+		'audi'
 	);
 
 	$voiture2 = new Voiture(
@@ -21,7 +21,7 @@
 		'Ford',
 		'bleu',
 		'3.5 tonnes',
-		'suv.jpg'
+		'suv'
 	);
 ?>
 <!DOCTYPE html>

@@ -2,18 +2,18 @@
 
 	class Database {
 
-		private $_servername;
-		private $_username;
-		private $_password;
-		private $_dbname;
+		private $servername;
+		private $username;
+		private $password;
+		private $dbname;
 
 		protected function connect(){
-			$this->_servername = "localhost:8889";
-			$this->_username = "root";
-			$this->_password = "root";
-			$this->_dbname = "trainingoop";
+			$this->servername = "localhost:8889";
+			$this->username = "root";
+			$this->password = "root";
+			$this->dbname = "trainingoop";
 
-			$connexion = new mysqli($this->_servername, $this->_username, $this->_password, $this->_dbname);
+			$connexion = new mysqli($this->servername, $this->username, $this->password, $this->dbname);
 			return $connexion
 		}
 
