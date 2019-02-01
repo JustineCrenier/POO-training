@@ -1,0 +1,62 @@
+@import 'reset';
+@import 'var';
+
+//Styles généraux
+
+*{
+	box-sizing: border-box;
+}
+
+h1,h2,h3,p,a,input,label{
+	font-family: $font;
+}
+
+//connexion
+
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: $colorback;
+
+	form{
+		display: flex;
+		flex-direction: column;
+		padding: 2em;
+		border: 3px solid $color;
+		border-radius: 20px;
+		justify-content: center;
+
+		h1{
+			font-size: 2em;
+			margin-bottom: 1em;
+			color: white;
+		}
+		.input{
+			background-color: transparent;
+			border: 2px solid $color;
+			border-radius: 10px;
+			padding: 0.8em;
+			margin-bottom: 1em;
+			color: white;
+		}
+
+		.submit{
+			background-color: $color;
+			color: white;
+			font-size: 0.8em;
+			text-transform: uppercase;
+			padding: 0.8em 1.5em;
+			border: 2px solid $color;
+			align-self: center;
+			border-radius: 10px;
+			transition: all 0.3s ease;
+
+			&:hover{
+				transition: all 0.3s ease;
+				background-color: transparent;
+			}
+		}
+	}
+}
